@@ -36,7 +36,6 @@ def count_singles(die):
 
 
 def count_die(roll, num_die):
-    print(roll)
     ones = roll.count(1)
     twos = roll.count(2)
     threes = roll.count(3)
@@ -97,34 +96,125 @@ def count_die(roll, num_die):
         return 0, 0
 
 
-def take_turn(on_the_board=False, gambler=False):
+def take_turn(last_round=False, on_the_board=False, gambler=False):
     score = 0
-    if on_the_board is False:
+    if on_the_board is False or last_round:
         stats = count_die(dice_roll(6), 6)
         if stats[0] == 0:
-            print("busted")
-            return score
+            return 0
         score += stats[0]
         die = stats[1]
-        print(score, die)
         while score < 1000:
             new_roll = count_die(dice_roll(die), die)
             if new_roll != (0, 0):
                 score += new_roll[0]
                 die = new_roll[1]
-                print(new_roll, score, die)
                 if die == 0:
                     die = 6
             elif new_roll == (0, 0):
-                print("boo")
                 return 0
         if score > 999:
             return score
 
-    if gambler is False:
-        pass
-    elif gambler:
-        pass
+    if gambler is False and on_the_board:
+        stats = count_die(dice_roll(6), 6)
+        if stats[0] == 0:
+            return 0
+        score += stats[0]
+        die = stats[1]
+        while score < 350:
+            new_roll = count_die(dice_roll(die), die)
+            if new_roll != (0, 0):
+                score += new_roll[0]
+                die = new_roll[1]
+                if die == 0:
+                    die = 6
+            elif new_roll == (0, 0):
+                return 0
+        if score >= 350:
+            return score
+    elif gambler and on_the_board:
+        stats = count_die(dice_roll(6), 6)
+        if stats[0] == 0:
+            return 0
+        score += stats[0]
+        die = stats[1]
+        while score < 750:
+            new_roll = count_die(dice_roll(die), die)
+            if new_roll != (0, 0):
+                score += new_roll[0]
+                die = new_roll[1]
+                if die == 0:
+                    die = 6
+            elif new_roll == (0, 0):
+                return 0
+        if score >= 750:
+            return score
 
 
-take_turn()
+def play_the_game():
+    p1_score = 0
+    p1_otb = False
+    p2_score = 0
+    p2_otb = False
+    gambler_score = 0
+    gamb_otb = False
+    last_round = False
+    last_turns = 0
+    while p1_score < 10000 or p2_score < 10000 or gambler_score < 10000:
+        if p1_otb is False:
+            stats = take_turn()
+            if stats != 0:
+                p1_score += stats
+                p1_otb = True
+        if p2_otb is False:
+            stats = take_turn()
+            if stats != 0:
+                p2_score += stats
+                p2_otb = True
+        if gamb_otb is False:
+            stats = take_turn()
+            if stats != 0:
+                gambler_score += stats
+                gamb_otb = True
+        if last_round is False:
+            if p1_otb:
+                stats = take_turn(on_the_board=True)
+                if stats != 0:
+                    p1_score += stats
+                    if p1_score > 10000:
+                        last_round = True
+            if p2_otb:
+                stats = take_turn(on_the_board=True)
+                if stats != 0:
+                    p2_score += stats
+                    if p2_score > 10000:
+                        last_round = True
+            if gamb_otb:
+                stats = take_turn(on_the_board=True, gambler=True)
+                if stats != 0:
+                    gambler_score += stats
+                    if gambler_score > 10000:
+                        last_round = True
+        if last_round:
+            if p1_score < 10000:
+                stats = take_turn(last_round=True, on_the_board=True)
+                if stats != 0:
+                    p1_score += stats
+            if p2_score < 10000:
+                stats = take_turn(last_round=True, on_the_board=True)
+                if stats != 0:
+                    p2_score += stats
+            if gambler_score < 10000:
+                stats = take_turn(last_round=True, on_the_board=True)
+                if stats != 0:
+                    gambler_score += stats
+
+    if p1_score >= 10000 or p2_score >= 10000 or gambler_score >= 10000:
+        print("Winner!")
+        print("Player One {}, Player Two {}, Gambler {}".format(p1_score, p2_score, gambler_score))
+
+
+
+
+play_the_game()
