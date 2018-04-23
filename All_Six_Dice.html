@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>All Six Dice of One Number</title>
+        
+<link rel="stylesheet" href="https://cdn.pydata.org/bokeh/release/bokeh-0.12.13.min.css" type="text/css" />
+        
+<script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-0.12.13.min.js"></script>
+<script type="text/javascript">
+    Bokeh.set_log_level("info");
+</script>
+        <style>
+          html {
+            width: 100%;
+            height: 100%;
+          }
+          body {
+            width: 90%;
+            height: 100%;
+            margin: auto;
+          }
+        </style>
+    </head>
+    <body>
+        
+        <div class="bk-root">
+            <div class="bk-plotdiv" id="b9cfb021-91d5-4db6-9619-4339a531666c"></div>
+        </div>
+        
+        <script type="application/json" id="6a954a3c-c9e7-4846-8fc0-713aebcbf494">
+          {"435ee157-b97a-47ed-8246-b7d8eee7f95e":{"roots":{"references":[{"attributes":{"grid_line_color":{"value":null},"plot":{"id":"305ca25d-6a46-48e6-92b2-64a7a9cd3111","subtype":"Figure","type":"Plot"},"ticker":{"id":"d796cd02-809e-44af-b1c9-00fbb008451a","type":"CategoricalTicker"}},"id":"22a5c9c4-8cfa-4199-a429-e990d9814a9a","type":"Grid"},{"attributes":{"formatter":{"id":"d805fe78-a9d6-473d-bd03-1a58136bb004","type":"CategoricalTickFormatter"},"major_label_text_font_size":{"value":"13px"},"plot":{"id":"305ca25d-6a46-48e6-92b2-64a7a9cd3111","subtype":"Figure","type":"Plot"},"ticker":{"id":"d796cd02-809e-44af-b1c9-00fbb008451a","type":"CategoricalTicker"}},"id":"89a49222-39b9-4a53-94d6-5e8694a3d8b1","type":"CategoricalAxis"},{"attributes":{"callback":null,"end":80000},"id":"b83a2ac9-1677-4390-8dce-bb7f9eabc1e0","type":"Range1d"},{"attributes":{"fill_color":{"field":"color"},"line_color":{"value":"white"},"top":{"field":"data"},"width":{"value":0.6},"x":{"field":"name"}},"id":"42834bbc-6034-4370-9f49-b150dcb12e12","type":"VBar"},{"attributes":{"callback":null,"tooltips":[["Player","@name"],["Stats","@data"]]},"id":"5e03931e-817b-451e-a2a5-36dbcb8f5612","type":"HoverTool"},{"attributes":{},"id":"d805fe78-a9d6-473d-bd03-1a58136bb004","type":"CategoricalTickFormatter"},{"attributes":{},"id":"4b89033b-96b6-4c0a-811e-8ef049c5fe8a","type":"BasicTicker"},{"attributes":{},"id":"3f53d1ae-c123-45ed-909b-858d5d076fe5","type":"LinearScale"},{"attributes":{"callback":null,"tooltips":[["6 Dice of","@name"],["Total Occurrence","@data"]]},"id":"09038b47-cba1-4a9c-8823-486ef4777721","type":"HoverTool"},{"attributes":{"plot":null,"text":"10,000 Dice Game Winners Out of 100,000","text_font_size":{"value":"24px"}},"id":"3d7b0bf8-8af9-42f3-a1d4-3be5b7cc29df","type":"Title"},{"attributes":{"callback":null,"factors":["Player One","Player Two","Gambler"]},"id":"c5e3e7c0-0b36-4366-826c-2e40381666ea","type":"FactorRange"},{"attributes":{"grid_line_color":{"value":null},"plot":{"id":"448f3430-3e4d-413c-a2bf-eb3c89e4734b","subtype":"Figure","type":"Plot"},"ticker":{"id":"6efbe617-68d2-490c-810e-87860d5e9809","type":"CategoricalTicker"}},"id":"57f5bfdc-ebc9-4c16-b792-2783cd718413","type":"Grid"},{"attributes":{"active_drag":"auto","active_inspect":"auto","active_scroll":"auto","active_tap":"auto","tools":[{"id":"c4cebfcf-06c4-4018-a9fd-f5dbad745b4e","type":"ResetTool"},{"id":"5e03931e-817b-451e-a2a5-36dbcb8f5612","type":"HoverTool"},{"id":"885895ca-719f-4187-b0af-26f2ef5ba649","type":"SaveTool"}]},"id":"5f42811a-a43c-483e-b412-2dcf465c7098","type":"Toolbar"},{"attributes":{"dimension":1,"plot":{"id":"448f3430-3e4d-413c-a2bf-eb3c89e4734b","subtype":"Figure","type":"Plot"},"ticker":{"id":"4b89033b-96b6-4c0a-811e-8ef049c5fe8a","type":"BasicTicker"}},"id":"5040564f-1321-49c7-80d3-2bd2131fe000","type":"Grid"},{"attributes":{},"id":"b91cd843-4b2d-4c19-b468-87bd8e5d5ffb","type":"CategoricalScale"},{"attributes":{"dimension":1,"plot":{"id":"305ca25d-6a46-48e6-92b2-64a7a9cd3111","subtype":"Figure","type":"Plot"},"ticker":{"id":"fb69364f-1028-4d3a-9b9d-a689b58406d2","type":"BasicTicker"}},"id":"fbdba49c-0c33-4501-8e3d-6851206a01d9","type":"Grid"},{"attributes":{},"id":"730e4e50-1f08-40bb-b6d5-d68fc713601c","type":"CategoricalTickFormatter"},{"attributes":{"below":[{"id":"89a49222-39b9-4a53-94d6-5e8694a3d8b1","type":"CategoricalAxis"}],"left":[{"id":"166eb25f-6638-46f5-9e92-296ae5ffa62e","type":"LinearAxis"}],"plot_height":650,"plot_width":800,"renderers":[{"id":"89a49222-39b9-4a53-94d6-5e8694a3d8b1","type":"CategoricalAxis"},{"id":"22a5c9c4-8cfa-4199-a429-e990d9814a9a","type":"Grid"},{"id":"166eb25f-6638-46f5-9e92-296ae5ffa62e","type":"LinearAxis"},{"id":"fbdba49c-0c33-4501-8e3d-6851206a01d9","type":"Grid"},{"id":"026c7485-902f-40c1-b08b-d8c6942456c9","type":"GlyphRenderer"}],"sizing_mode":"stretch_both","title":{"id":"3d7b0bf8-8af9-42f3-a1d4-3be5b7cc29df","type":"Title"},"toolbar":{"id":"5f42811a-a43c-483e-b412-2dcf465c7098","type":"Toolbar"},"x_range":{"id":"c5e3e7c0-0b36-4366-826c-2e40381666ea","type":"FactorRange"},"x_scale":{"id":"b91cd843-4b2d-4c19-b468-87bd8e5d5ffb","type":"CategoricalScale"},"y_range":{"id":"b83a2ac9-1677-4390-8dce-bb7f9eabc1e0","type":"Range1d"},"y_scale":{"id":"3f53d1ae-c123-45ed-909b-858d5d076fe5","type":"LinearScale"}},"id":"305ca25d-6a46-48e6-92b2-64a7a9cd3111","subtype":"Figure","type":"Plot"},{"attributes":{"source":{"id":"83a621fc-8001-4ad8-9a61-3d013f1406e9","type":"ColumnDataSource"}},"id":"023d4876-2e14-4423-be2b-e0e22e07086c","type":"CDSView"},{"attributes":{"formatter":{"id":"44df7055-a898-4547-af87-1f68225970db","type":"BasicTickFormatter"},"major_label_text_font_size":{"value":"13px"},"plot":{"id":"305ca25d-6a46-48e6-92b2-64a7a9cd3111","subtype":"Figure","type":"Plot"},"ticker":{"id":"fb69364f-1028-4d3a-9b9d-a689b58406d2","type":"BasicTicker"}},"id":"166eb25f-6638-46f5-9e92-296ae5ffa62e","type":"LinearAxis"},{"attributes":{},"id":"c4cebfcf-06c4-4018-a9fd-f5dbad745b4e","type":"ResetTool"},{"attributes":{},"id":"d796cd02-809e-44af-b1c9-00fbb008451a","type":"CategoricalTicker"},{"attributes":{},"id":"6e42ed58-1752-44f5-914a-062f7215bbd9","type":"ResetTool"},{"attributes":{},"id":"6efbe617-68d2-490c-810e-87860d5e9809","type":"CategoricalTicker"},{"attributes":{},"id":"caefbcbe-6438-48d2-b755-1ab8f5151221","type":"LinearScale"},{"attributes":{},"id":"fb69364f-1028-4d3a-9b9d-a689b58406d2","type":"BasicTicker"},{"attributes":{"formatter":{"id":"b70fa254-149a-4294-9775-77ee59b28971","type":"BasicTickFormatter"},"major_label_text_font_size":{"value":"14px"},"plot":{"id":"448f3430-3e4d-413c-a2bf-eb3c89e4734b","subtype":"Figure","type":"Plot"},"ticker":{"id":"4b89033b-96b6-4c0a-811e-8ef049c5fe8a","type":"BasicTicker"}},"id":"d0ae1873-fa92-4eff-8463-c00c791e01ec","type":"LinearAxis"},{"attributes":{},"id":"b70fa254-149a-4294-9775-77ee59b28971","type":"BasicTickFormatter"},{"attributes":{},"id":"44df7055-a898-4547-af87-1f68225970db","type":"BasicTickFormatter"},{"attributes":{},"id":"14be564f-622b-4e06-ac81-389bb9b7e86a","type":"SaveTool"},{"attributes":{"fill_alpha":{"value":0.1},"fill_color":{"value":"#1f77b4"},"line_alpha":{"value":0.1},"line_color":{"value":"#1f77b4"},"top":{"field":"data"},"width":{"value":0.6},"x":{"field":"name"}},"id":"1edf84a4-eb94-4d56-9f8c-976d69a19142","type":"VBar"},{"attributes":{"below":[{"id":"9efb34be-f511-4cda-ae79-0de889fd9acf","type":"CategoricalAxis"}],"left":[{"id":"d0ae1873-fa92-4eff-8463-c00c791e01ec","type":"LinearAxis"}],"plot_height":650,"plot_width":800,"renderers":[{"id":"9efb34be-f511-4cda-ae79-0de889fd9acf","type":"CategoricalAxis"},{"id":"57f5bfdc-ebc9-4c16-b792-2783cd718413","type":"Grid"},{"id":"d0ae1873-fa92-4eff-8463-c00c791e01ec","type":"LinearAxis"},{"id":"5040564f-1321-49c7-80d3-2bd2131fe000","type":"Grid"},{"id":"df6a3983-7f3a-406e-ae27-d9bf491f0197","type":"GlyphRenderer"}],"sizing_mode":"stretch_both","title":{"id":"b58fbe64-8d8b-4269-81f8-e3da13040dde","type":"Title"},"toolbar":{"id":"49f83102-2b91-449a-9188-3d67581b8d21","type":"Toolbar"},"x_range":{"id":"2ea5b101-df35-419b-83a1-398358b4f924","type":"FactorRange"},"x_scale":{"id":"72187de3-3396-4119-9f57-4ebb980e0885","type":"CategoricalScale"},"y_range":{"id":"a9831794-733f-4db9-897c-9ef09450ccad","type":"Range1d"},"y_scale":{"id":"caefbcbe-6438-48d2-b755-1ab8f5151221","type":"LinearScale"}},"id":"448f3430-3e4d-413c-a2bf-eb3c89e4734b","subtype":"Figure","type":"Plot"},{"attributes":{},"id":"885895ca-719f-4187-b0af-26f2ef5ba649","type":"SaveTool"},{"attributes":{"data_source":{"id":"891e1633-fa3e-4b64-ba04-c83c797d33f3","type":"ColumnDataSource"},"glyph":{"id":"95264471-5563-4ac1-ace0-2def3a79926b","type":"VBar"},"hover_glyph":null,"muted_glyph":null,"nonselection_glyph":{"id":"1edf84a4-eb94-4d56-9f8c-976d69a19142","type":"VBar"},"selection_glyph":null,"view":{"id":"9d8d1ce1-484e-4443-a484-5275c0c007c1","type":"CDSView"}},"id":"df6a3983-7f3a-406e-ae27-d9bf491f0197","type":"GlyphRenderer"},{"attributes":{"plot":null,"text":"All Six Dice of One Number out of 100,000 Games","text_font_size":{"value":"24px"}},"id":"b58fbe64-8d8b-4269-81f8-e3da13040dde","type":"Title"},{"attributes":{"source":{"id":"891e1633-fa3e-4b64-ba04-c83c797d33f3","type":"ColumnDataSource"}},"id":"9d8d1ce1-484e-4443-a484-5275c0c007c1","type":"CDSView"},{"attributes":{"fill_alpha":{"value":0.1},"fill_color":{"value":"#1f77b4"},"line_alpha":{"value":0.1},"line_color":{"value":"#1f77b4"},"top":{"field":"data"},"width":{"value":0.6},"x":{"field":"name"}},"id":"a051d6e8-5c82-475c-af8f-6871a3bb8c27","type":"VBar"},{"attributes":{"callback":null,"column_names":["name","data","color"],"data":{"color":["green","blue","red"],"data":[29096,29337,70663],"name":["Player One","Player Two","Gambler"]}},"id":"83a621fc-8001-4ad8-9a61-3d013f1406e9","type":"ColumnDataSource"},{"attributes":{"callback":null,"end":250},"id":"a9831794-733f-4db9-897c-9ef09450ccad","type":"Range1d"},{"attributes":{"data_source":{"id":"83a621fc-8001-4ad8-9a61-3d013f1406e9","type":"ColumnDataSource"},"glyph":{"id":"42834bbc-6034-4370-9f49-b150dcb12e12","type":"VBar"},"hover_glyph":null,"muted_glyph":null,"nonselection_glyph":{"id":"a051d6e8-5c82-475c-af8f-6871a3bb8c27","type":"VBar"},"selection_glyph":null,"view":{"id":"023d4876-2e14-4423-be2b-e0e22e07086c","type":"CDSView"}},"id":"026c7485-902f-40c1-b08b-d8c6942456c9","type":"GlyphRenderer"},{"attributes":{},"id":"72187de3-3396-4119-9f57-4ebb980e0885","type":"CategoricalScale"},{"attributes":{"callback":null,"factors":["Ones","Twos","Threes","Fours","Fives","Sixes"]},"id":"2ea5b101-df35-419b-83a1-398358b4f924","type":"FactorRange"},{"attributes":{"active_drag":"auto","active_inspect":"auto","active_scroll":"auto","active_tap":"auto","tools":[{"id":"6e42ed58-1752-44f5-914a-062f7215bbd9","type":"ResetTool"},{"id":"09038b47-cba1-4a9c-8823-486ef4777721","type":"HoverTool"},{"id":"14be564f-622b-4e06-ac81-389bb9b7e86a","type":"SaveTool"}]},"id":"49f83102-2b91-449a-9188-3d67581b8d21","type":"Toolbar"},{"attributes":{"callback":null,"column_names":["name","data","color"],"data":{"color":["red","orange","green","blue","purple","teal"],"data":[197,199,182,204,189,207],"name":["Ones","Twos","Threes","Fours","Fives","Sixes"]}},"id":"891e1633-fa3e-4b64-ba04-c83c797d33f3","type":"ColumnDataSource"},{"attributes":{"formatter":{"id":"730e4e50-1f08-40bb-b6d5-d68fc713601c","type":"CategoricalTickFormatter"},"major_label_text_font_size":{"value":"14px"},"plot":{"id":"448f3430-3e4d-413c-a2bf-eb3c89e4734b","subtype":"Figure","type":"Plot"},"ticker":{"id":"6efbe617-68d2-490c-810e-87860d5e9809","type":"CategoricalTicker"}},"id":"9efb34be-f511-4cda-ae79-0de889fd9acf","type":"CategoricalAxis"},{"attributes":{"fill_color":{"field":"color"},"line_color":{"value":"white"},"top":{"field":"data"},"width":{"value":0.6},"x":{"field":"name"}},"id":"95264471-5563-4ac1-ace0-2def3a79926b","type":"VBar"}],"root_ids":["305ca25d-6a46-48e6-92b2-64a7a9cd3111","448f3430-3e4d-413c-a2bf-eb3c89e4734b"]},"title":"Bokeh Application","version":"0.12.13"}}
+        </script>
+        <script type="text/javascript">
+          (function() {
+            var fn = function() {
+              Bokeh.safely(function() {
+                (function(root) {
+                  function embed_document(root) {
+                    
+                  var docs_json = document.getElementById('6a954a3c-c9e7-4846-8fc0-713aebcbf494').textContent;
+                  var render_items = [{"docid":"435ee157-b97a-47ed-8246-b7d8eee7f95e","elementid":"b9cfb021-91d5-4db6-9619-4339a531666c","modelid":"448f3430-3e4d-413c-a2bf-eb3c89e4734b"}];
+                  root.Bokeh.embed.embed_items(docs_json, render_items);
+                
+                  }
+                  if (root.Bokeh !== undefined) {
+                    embed_document(root);
+                  } else {
+                    var attempts = 0;
+                    var timer = setInterval(function(root) {
+                      if (root.Bokeh !== undefined) {
+                        embed_document(root);
+                        clearInterval(timer);
+                      }
+                      attempts++;
+                      if (attempts > 100) {
+                        console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing")
+                        clearInterval(timer);
+                      }
+                    }, 10, root)
+                  }
+                })(window);
+              });
+            };
+            if (document.readyState != "loading") fn();
+            else document.addEventListener("DOMContentLoaded", fn);
+          })();
+        </script>
+    </body>
+</html>
