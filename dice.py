@@ -1,4 +1,5 @@
 import random
+from dice_stats import insert_in_db, get_all6_stats
 
 
 def dice_roll(x):
@@ -65,6 +66,7 @@ def count_die(roll, num_die):
             die -= 3
         if value == 6:
             score += (count_triples(pos)) * 2
+            insert_in_db(pos)
             die -= 6
         if value == 4 and 2 in tots and key == 0:
             score += (count_triples(pos) + count_singles(1))
@@ -160,7 +162,6 @@ def play_the_game():
     gambler_score = 0
     gamb_otb = False
     last_round = False
-    last_turns = 0
     while p1_score < 10000 or p2_score < 10000 or gambler_score < 10000:
         if p1_otb is False:
             stats = take_turn()
@@ -211,10 +212,47 @@ def play_the_game():
                     gambler_score += stats
 
     if p1_score >= 10000 or p2_score >= 10000 or gambler_score >= 10000:
-        print("Winner!")
-        print("Player One {}, Player Two {}, Gambler {}".format(p1_score, p2_score, gambler_score))
+        return p1_score, p2_score, gambler_score
 
 
+def run_sim():
+    game = 100000
+    p1_wins = 0
+    p2_wins = 0
+    gambler = 0
+    while game > 0:
+        stats = play_the_game()
+        if stats[0] > stats[1] and stats[0] > stats[2]:
+            p1_wins += 1
+        if stats[1] > stats[0] and stats[1] > stats[2]:
+            p2_wins += 1
+        else:
+            gambler += 1
+        game -= 1
+    all_the_dice = list(get_all6_stats())
+    ones = 0
+    twos = 0
+    threes = 0
+    fours = 0
+    fives = 0
+    sixes = 0
+    for item in all_the_dice:
+        for x in item:
+            if x not in ['(', ',', ')']:
+                if int(x) == 1:
+                    ones += 1
+                if int(x) == 2:
+                    twos += 1
+                if int(x) == 3:
+                    threes += 1
+                if int(x) == 4:
+                    fours += 1
+                if int(x) == 5:
+                    fives += 1
+                if int(x) == 6:
+                    sixes += 1
+    array = [ones, twos, threes, fours, fives, sixes]
+    return p1_wins, p2_wins, gambler, array
 
 
-play_the_game()
+print(run_sim())
