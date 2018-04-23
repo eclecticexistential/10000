@@ -1,1 +1,4 @@
 .idea
+.ipynb_checkpoints/
+__pycache__/dice.cpython-36.pyc
+__pycache__/dice_stats.cpython-36.pyc

@@ -255,4 +255,5 @@ def run_sim():
     return p1_wins, p2_wins, gambler, array
 
 
-print(run_sim())
+# print(run_sim())
+totals = [29096, 29337, 70663, [197, 199, 182, 204, 189, 207]]
